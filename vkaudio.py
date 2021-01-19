@@ -20,7 +20,7 @@ class Client():
             self.v     = api_version;
             self.api   = "https://api.vk.com/method/";
 
-    # return the user or group audio list
+    # return the user audio list
     def audio_get(self, owner_id:int = 1, count:int = 500):
         response = requests.get(f"{self.api}audio.get?access_token={self.token}&v={self.v}&owner_id={owner_id}&count={count}").json();
         return response;
